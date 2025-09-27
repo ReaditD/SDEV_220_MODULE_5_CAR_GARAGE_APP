@@ -1,0 +1,50 @@
+# Node
+
+
+dist/
+build/
+
+# Python
+
+*.py[cod]
+*.egg-info/
+
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# Binaries / Executables / Media
+*.exe
+*.dll
+*.so
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.mp4
+*.zip
+*.tar.gz
+# Ignore user/system data
+AppData/
+.vscode/
+
+*.db
+*.db-shm
+*.db-wal
+*.log
+*.cache
+*.pyc
+__pycache__/
+
+# Ignore Chrome and browser data
+Google/
+
+# Node or Python environments
+node_modules/
+.env
+venv/
+
+.vs #for Visual Studio
+.ipynb_checkpoints/
+

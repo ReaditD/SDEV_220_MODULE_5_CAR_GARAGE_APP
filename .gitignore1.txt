@@ -1,0 +1,53 @@
+# Node
+node_modules/
+dist/
+build/
+
+# Python
+*.py[cod]
+*.egg-info/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.env
+venv/
+myvenv/
+env/
+.ipynb_checkpoints/
+
+# Visual Studio / VS Code
+.vscode/
+.vs/
+*.user
+*.suo
+*.vcxproj.user
+
+# OS-specific
+.DS_Store
+Thumbs.db
+AppData/
+
+# Logs & Databases
+*.log
+*.db
+*.db-shm
+*.db-wal
+*.cache
+
+# Binaries / Executables
+*.exe
+*.dll
+*.so
+
+# Media (if not needed in repo)
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.mp4
+*.zip
+*.tar.gz
+
+# Browser data
+Google/
