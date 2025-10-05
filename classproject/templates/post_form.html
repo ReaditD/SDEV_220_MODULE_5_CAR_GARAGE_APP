@@ -1,0 +1,14 @@
+{% extends "master.html" %} 
+
+{% block stuff %}
+    <div class="jumbotron text-center">
+        <h1 class="display-4">Create New Posts</h1>
+    </div>
+    <form method = 'POST'>
+        {% csrf_token %}
+        {{ blogform }}
+        <input  type = submit> <!--creates button. This is a very simple button-->
+<body>
+
+</html>
+{% endblock %}

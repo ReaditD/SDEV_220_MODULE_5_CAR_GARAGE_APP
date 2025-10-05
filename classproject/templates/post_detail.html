@@ -1,0 +1,32 @@
+{% extends "master.html" %} 
+{% block stuff %}
+   <div class="jumbotron text-center">
+        <h1 class="display-4">Latest Posts</h1>
+    </div>
+    <div class="container-fluid">
+    {% if post %}
+        
+        <div class="card" style="background-color: rgb(176, 243, 200);">
+            <div class="card-header" style="background: #b5dbdb;">
+                {{ post.author}}
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">{{post.title}}</h5>
+                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+            </div>
+            <div class="card-footer text-muted">
+                date
+            </div>
+        </div>
+        <hr>
+        
+    {% else % }
+        <p>No Posts available</p>
+    {% endif %}
+        <a href="{% url 'update_post' post.id %}" class="btn btn-warning btn-lg" role="button" aria-pressed="true">Edit</a>|
+
+        <a href="{% url 'delete_post' post.id %}" class="btn btn-danger btn-lg" role="button" aria-pressed="true">Delete</a>
+    </div>
+    {% endblock %}
+</body>
