@@ -21,13 +21,8 @@
                 <p>{{ post.text|linebreaksbr }}</p>
             </article>
         {% endfor %}
-    </body>
+</body>
 </html>
-
-
-
-
-
 
     <div class="jumbotron text-center">
         <h1 class="display-4">Latest Posts</h1>
@@ -37,15 +32,16 @@
         {%for i in post%}
         <div class="card" style="background-color: rgb(176, 243, 200);">
             <div class="card-header" style="background: #b5dbdb;">
-                {{ i.author}}
+                {{ i.author}} __Post id number: {{ i.id}}
             </div>
             <div class="card-body">
                 <h5 class="card-title">{{i.title}}</h5>
-                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                <p class="card-text">{{ i.body}}.</p>
+                <!-- <p class="card-text">Some quick example text.</p>-->
                 <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
             </div>
             <div class="card-footer text-muted">
-                date
+                {{ i.created_at}}
             </div>
         </div>
         <hr>
