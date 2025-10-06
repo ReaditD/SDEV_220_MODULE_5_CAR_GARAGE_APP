@@ -50,6 +50,7 @@ def delete_post(request, id):
     return redirect("show_post")
 
 #From Django tutorial
+
 #def post_list(request):
      #posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
      #posts = Post.objects.filter(id,__lte=timezone.now()).order_by('published_date')
