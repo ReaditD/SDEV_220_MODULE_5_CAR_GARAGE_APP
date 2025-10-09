@@ -23,14 +23,14 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('admin1/',blog_views.index,name="index"),
     path('admin2/',blog_views.c_1,name="c_1"),
-    path('admin3/',blog_views.show_post,name="show_post"),
+    path('',blog_views.show_post,name="show_post"),
     path('',car_views.car_list,name="car_list"),
 
     #path('',car_views.car_list,name="car_list"),
     path('newpost/', blog_views.add_post,name="addposts"),
-    path('newpost1/<int:id>/', blog_views.find_post, name="find_post"),
+    path('newpost1/<int:id>/', blog_views.find_post, name="find_post"),#Exmaple: http://127.0.0.1:8000/newpost1/6/
     path('updateposts/<int:id>/', blog_views.update_post, name="update_post"),
     path('deletepost/<int:id>/', blog_views.delete_post, name="delete_post"),
     #path('', include('blog.urls')),
-    path('', blog_views.post_list, name='post_list'),
+    path('admin3/', blog_views.post_list, name='post_list'),
 ]
