@@ -2,6 +2,8 @@ from django.shortcuts import render, redirect, get_object_or_404
 from .models import Post
 from .forms import PostForm
 from django.utils import timezone #Django tutorial
+from django.shortcuts import render, get_object_or_404 #Django tutorial
+
 # Create your views here.
 def index(request):
     sentence = "This is the first django view thing"
@@ -51,7 +53,11 @@ def delete_post(request, id):
 
 #From Django tutorial
 def post_list(request):
-     posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
-     posts = Post.objects.filter(id,__lte=timezone.now()).order_by('published_date')
-     return render(request, 'post_list.html', {'Post': Post})
+     posts = Post.objects.filter(created_at__lte=timezone.now()).order_by('created_at')
+     #posts = Post.objects.filter(id,__lte=timezone.now()).order_by('created_at')
+     #return render(request, 'post_list.html', {'Post': Post})
+     return render(request, 'post_list.html', {'posts': posts})
 
+def post_detail(request, pk):#Django tutorial
+    post = get_object_or_404(Post, pk=pk)
+    return render(request, 'post_detail.html', {'post':post})

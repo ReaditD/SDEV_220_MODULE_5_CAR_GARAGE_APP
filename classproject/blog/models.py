@@ -13,7 +13,8 @@ class Post(models.Model):
     created_at = models.DateTimeField(default=timezone.now)
     updated_at = models.DateTimeField(auto_now=True)
     replies_from_others = models.TextField(default = "none")
-    id = models.IntegerField()
+    #id = models.IntegerField()
+    id = models.AutoField(primary_key=True)
     
     def __str__(self):
         return self.title

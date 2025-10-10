@@ -33,4 +33,7 @@ urlpatterns = [
     path('deletepost/<int:id>/', blog_views.delete_post, name="delete_post"),
     #path('', include('blog.urls')),
     path('admin3/', blog_views.post_list, name='post_list'),
+    #path('admin4/', blog_views.post_list, name='post_list'),#From Django Girls Tutrial
+    path('post/<int:pk>/',blog_views.post_detail, name='post_detail'),#From Django Girls Tutrial
+
 ]
