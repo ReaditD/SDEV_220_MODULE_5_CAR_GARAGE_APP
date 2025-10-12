@@ -61,3 +61,7 @@ def post_list(request):
 def post_detail(request, pk):#Django tutorial
     post = get_object_or_404(Post, pk=pk)
     return render(request, 'post_detail.html', {'post':post})
+
+def post_new(request):
+    form = PostForm()
+    return render(request,'post_edit.html', {'form': form })

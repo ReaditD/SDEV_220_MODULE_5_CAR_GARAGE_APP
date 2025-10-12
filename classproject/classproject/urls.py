@@ -35,5 +35,8 @@ urlpatterns = [
     path('admin3/', blog_views.post_list, name='post_list'),
     #path('admin4/', blog_views.post_list, name='post_list'),#From Django Girls Tutrial
     path('post/<int:pk>/',blog_views.post_detail, name='post_detail'),#From Django Girls Tutrial
-
+      
+    path('', blog_views.post_list, name='post_list'),#From Django Girls Tutrial
+    #path('post/<int:pk>/', blog_views.post_detail, name='post_detail'),#From Django Girls Tutrial
+    path('post/new/', blog_views.post_new, name='post_new'),#From Django Girls Tutrial
 ]
